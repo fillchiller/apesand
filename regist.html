@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apesand</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/regist.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <div id="regist">
+        <div class="frame">
+            <div class="regist_box">
+                <h2>JOIN</h2>
+                <form name="regist_form" action="" method="post">
+                    <div class="id">
+                        <label for="user_id">아이디</label>
+                        <input type="text" name="userid" id="user_id" autocomplete="off">
+                        <button>중복확인</button>
+                    </div>
+                    <div class="pass">
+                        <label for="user_pw">비밀번호</label>
+                        <input type="password" name="userpass" id="user_pw" autocomplete="off">
+                    </div>
+                    <div class="pass_re">
+                        <label for="user_pw_re">비밀번호 확인</label>
+                        <input type="password" name="userpassre" id="user_pw_re" autocomplete="off">
+                    </div>
+                    <div class="email">
+                        <label for="user_email">이메일</label>
+                        <input type="text" name="useremail1" id="user_email" autocomplete="off">
+                        <span>＠</span>
+                        <input type="text" name="useremail2" id="user_email" autocomplete="off">
+                    </div>
+                    <div class="name">
+                        <label for="user_name">이름</label>
+                        <input type="text" name="username" id="user_name" autocomplete="off">
+                    </div>
+                    <div class="phone">
+                        <label for="user_phone">전화번호</label>
+                        <input type="number" name="userphone1" id="user_phone" autocomplete="off">
+                        <span>－</span>
+                        <input type="number" name="userphone2" id="user_phone" autocomplete="off">
+                        <span>－</span>
+                        <input type="number" name="userphone3" id="user_phone" autocomplete="off">
+                    </div>
+                    <div class="address">
+                        <label for="user_address">주소</label>
+                        <input type="text" name="useraddress" id="user_address" autocomplete="off">
+                    </div>
+                    <button type="button">회원가입</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+</body>
+</html>

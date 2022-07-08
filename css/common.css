@@ -1,0 +1,271 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6{margin: 0; font-weight: 500;}
+p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+:root{
+    --pri-color : #283128;
+    --sec1-color : #50925d;
+    --sec2-color : #e9f4e9;
+    --point-color : #ae2c2d;
+}
+
+/* header part */
+#header{
+    height: 160px;
+    border-bottom: 1px solid rgba(40, 49, 40, 0.3);
+}
+#header .frame{
+    width: 1200px;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#header .frame .top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#header .frame .top ul.h_sns{
+    display: flex;
+    width: 165px;
+}
+#header .frame .top ul.h_sns li{
+    padding-top: 10px;
+    margin: 0 5px;
+}
+#header .frame .top ul.h_sns li:first-child{
+    margin-left: 0;
+}
+#header .frame .top ul.h_sns li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--sec1-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .frame .top ul.h_sns li a img{
+    height: 14px;
+    filter: brightness(100);
+}
+#header .frame .top .logo{
+    padding-top: 30px;
+}
+#header .frame .top .logo a{}
+#header .frame .top .logo a img{
+    display: block;
+}
+#header .frame .top ul.user_menu{
+    display: flex;
+    justify-content: end;
+    width: 165px;
+}
+#header .frame .top ul.user_menu li{
+    padding-top: 10px;
+    margin: 0 10px;
+}
+#header .frame .top ul.user_menu li:first-child{
+    margin: 0;
+}
+#header .frame .top ul.user_menu li a{
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    position: relative;
+}
+#header .frame .top ul.user_menu li:last-child a::after{
+    content: "";
+    position: absolute;
+    top: 50%; left: -11px;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 1px;
+    background-color: #999;
+}
+#header .frame .top ul.user_menu li a.cart_icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .frame .top ul.user_menu li a img{
+    height: 18px;
+}
+
+#header .frame nav{
+    position: relative;
+}
+#header .frame nav > ul{
+    display: flex;
+    justify-content: center;
+}
+#header .frame nav > ul > li{
+    margin: 0 20px;
+}
+#header .frame nav > ul > li > a{
+    display: block;
+    width: 100px;
+    font-size: 17px;
+    line-height: 50px;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+#header .frame nav > ul > li > a::after{
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--sec1-color);
+    opacity: 0;
+}
+#header .frame nav > ul > li.active > a::after, 
+#header .frame nav > ul > li:hover > a::after{
+    transition: opacity 0.2s;
+    opacity: 1;
+}
+#header .frame nav .sub_menu{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    max-height: 0;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+#header .frame nav:hover .sub_menu{
+    transition: max-height 0.2s;
+    max-height: 180px;
+}
+#header .frame nav .sub_menu > ul{
+    margin: 0 20px;
+    padding: 10px 0;
+}
+#header .frame nav .sub_menu > ul > li{
+    margin: 5px 0;
+}
+#header .frame nav .sub_menu > ul > li > a{
+    display: block;
+    width: 100px;
+    line-height: 30px;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-align: center;
+    border-radius: 2px;
+    color: #333;
+}
+#header .frame nav .sub_menu > ul > li:hover > a{
+    background-color: var(--sec1-color);
+    color: #fff;
+    transition: background-color 0.3s, color 0.2s;
+}
+
+
+/* notReady part */
+#notReady{
+    height: calc(100vh - 340px);
+    background: #e9f4e9; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9f4e9 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e9f4e9 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e9f4e9 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f4e9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--pri-color);
+}
+#notReady b{
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+#notReady p{}
+
+
+/* footer part */
+#footer{
+    height: 180px;
+    background-color: var(--pri-color);
+}
+#footer .frame{
+    width: 1200px;
+    height: 100%;
+    padding: 0 10px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer .frame .f_logo{}
+#footer .frame .f_logo a{}
+#footer .frame .f_logo a img{
+    display: block;
+    filter: brightness(100);
+}
+#footer .frame .f_info{}
+#footer .frame .f_info ul.f_menu{
+    display: flex;
+}
+#footer .frame .f_info ul.f_menu li{
+    margin: 0 40px;
+    padding-bottom: 14px;
+}
+#footer .frame .f_info ul.f_menu li:first-child{
+    margin-left: 0;
+}
+#footer .frame .f_info ul.f_menu li:last-child{
+    margin-right: 0;
+}
+#footer .frame .f_info ul.f_menu li a{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+}
+#footer .frame .f_info ul.f_menu li a span{
+    font-weight: 500;
+}
+#footer .frame .f_info p{
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1;
+    padding-top: 10px;
+}
+#footer .frame .f_info p span{
+    font-weight: 500;
+}
+#footer .frame .f_sns{
+    display: flex;
+}
+#footer .frame .f_sns{}
+#footer .frame .f_sns li{
+    margin: 0 10px;
+}
+#footer .frame .f_sns li:last-child{
+    margin-right: 0;
+}
+#footer .frame .f_sns li a{}
+#footer .frame .f_sns li a img{
+    display: block;
+    height: 36px;
+}

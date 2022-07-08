@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+#promise{
+    background: #e9f4e9; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9f4e9 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e9f4e9 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e9f4e9 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f4e9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+#promise .frame{
+    width: 1000px;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+#promise .frame h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 80px;
+}
+#promise .frame [class^="box"]{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 80px;
+    position: relative;
+}
+#promise .frame .box2{
+    flex-direction: row-reverse;
+}
+#promise .frame [class^="box"] .img{
+    width: 440px;
+    height: 280px;
+    margin: 0 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 3px;
+    box-shadow: 4px 4px 8px var(--pri-color);
+}
+#promise .frame .box1 .img{
+    background-image: url(../img/promise_01.jpg);
+}
+#promise .frame .box2 .img{
+    background-image: url(../img/promise_02.jpg);
+}
+#promise .frame [class^="box"] .txt{
+    width: calc(100% - 480px);
+    padding: 0 30px;
+    position: relative;
+    z-index: 2;
+}
+#promise .frame [class^="box"] .txt p{
+    font-size: 18px;
+    color: var(--pri-color);
+    padding: 14px 0;
+}
+#promise .frame [class^="box"] .txt p span{
+    font-weight: 500;
+}
+#promise .frame [class^="box"] .txt p:before{
+    content: "· ";
+}
+#promise .frame [class^="box"] .bgtxt{
+    position: absolute;
+    width: 440px;
+    font-size: 130px;
+    line-height: 1;
+    top: 0;
+    color: #fff;
+}
+#promise .frame .box1 .bgtxt{
+    right: 0;
+    text-align: right;
+}
+#promise .frame .box2 .bgtxt{
+    left: 0;
+    color: var(--sec2-color);
+}
+
+
+#about{
+    background-image: url(../img/brandBg.png);
+    background-size: cover;
+    background-position: 0 0;
+}
+#about .greenBg{
+    background: -moz-linear-gradient(top,  rgba(40,49,40,0) 10%, rgba(40,49,40,1) 90%, rgba(40,49,40,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(40,49,40,0) 01%,rgba(40,49,40,1) 90%,rgba(40,49,40,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(40,49,40,0) 10%,rgba(40,49,40,1) 90%,rgba(40,49,40,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00283128', endColorstr='#283128',GradientType=0 ); /* IE6-9 */
+}
+#about .greenBg .frame{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 180px;
+}
+#about .greenBg .frame h2{
+    text-align: center;
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 80px;
+}
+#about .greenBg .frame .cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#about .greenBg .frame .cont .circle{
+    width: 180px;
+    height: 180px;
+    margin: 0 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+#about .greenBg .frame .cont .circle:hover{
+    background-color: rgba(64, 90, 64, 0.5);
+    border: 2px solid #405a40;
+    transition: background-color 0.2s, border 0.2s;
+}
+#about .greenBg .frame .cont .circle h3{
+    font-size: 20px;
+}
+#about .greenBg .frame .cont .circle p{
+    padding-top: 10px;
+    font-size: 14px;
+}
+#about .greenBg .frame > p{
+    width: 400px;
+    margin: 0 auto;
+    word-break: keep-all;
+    color: #fff;
+    font-weight: 300;
+    padding-top: 60px;
+}

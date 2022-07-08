@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+#login{
+    background: #e9f4e9; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9f4e9 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e9f4e9 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e9f4e9 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f4e9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+#login .frame{
+    width: 1200px;
+    height: 100%;
+    padding: 100px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login .frame .login_box{
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login .frame .login_box h2{
+    font-size: 34px;
+    letter-spacing: 8px;
+    font-weight: normal;
+    text-align: center;
+    color: var(--pri-color);
+    padding: 10px 0 30px;
+}
+#login .frame .login_box p{
+    width: 300px;
+    word-break: keep-all;
+    font-size: 16px;
+    text-align: center;
+    color: #777;
+    padding-bottom: 40px;
+}
+#login .frame .login_box form{}
+#login .frame .login_box form > div{
+    width: 280px;
+    height: 40px;
+    border: 1px solid var(--sec1-color);
+    display: flex;
+    align-items: center;
+}
+#login .frame .login_box form .id{
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+#login .frame .login_box form .pass{
+    border-radius: 0 0 10px 10px;
+}
+#login .frame .login_box form label{
+    padding: 0 6px;
+}
+#login .frame .login_box form label img{
+    display: block;
+    width: 20px;
+}
+#login .frame .login_box form input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--pri-color);
+    font-size: 16px;
+}
+#login .frame .login_box form input::placeholder{
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+#login .frame .login_box form button{
+    display: block;
+    width: 280px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    background-color: var(--pri-color);
+    border-radius: 3px;
+    margin: 40px auto 20px;
+}
+#login .frame .login_box form button:hover{
+    background-color: var(--sec1-color);
+    transition: background-color 0.2s;
+}
+#login .frame .login_box a{
+    display: block;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+#login .frame .login_box a:hover{
+    transition: color 0.2s;
+    color: var(--sec1-color);
+}

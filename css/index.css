@@ -1,0 +1,467 @@
+@charset "utf-8";
+
+/* mainSlider part */
+#mainSlider{
+    height: 400px;
+    position: relative;
+}
+#mainSlider .slider_frame{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#mainSlider .slider_frame > div{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+#mainSlider .slider_frame > div.show{
+    z-index: 2;
+    opacity: 1;
+}
+#mainSlider .slider_frame .slide1{
+    background-image: url(../img/main_slide1.jpg);
+}
+#mainSlider .slider_frame .slide2{
+    background-image: url(../img/notice_02.jpg);
+}
+#mainSlider .slider_frame .slide3{
+    background-image: url(../img/notice_03.jpg);
+}
+#mainSlider .pager{
+    position: absolute;
+    left: 50%; bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 3;
+}
+#mainSlider .pager li{
+    margin: 0 10px;
+}
+#mainSlider .pager li span{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+#mainSlider .pager li.active span{
+    background-color: #fff;
+}
+
+/* hot part */
+#hot{
+    padding: 100px 0 140px;
+}
+#hot .frame{
+    width: 1200px;
+    margin: 0 auto;
+}
+#hot .frame .top{
+    height: 460px;
+    margin: 0 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/red_carpet.png);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+}
+#hot .frame .top .particle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0; top: 0;
+    z-index: 1;
+}
+#hot .frame .top .particle .ptc_a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 80%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/particles_a.png);
+    animation: 5s ptc_a infinite linear;
+}
+@keyframes ptc_a {
+    0%{background-position: 50% 100;}
+    50%{background-position: 40% 50%;}
+    100%{background-position: 50% -2.5%;}
+}
+#hot .frame .top .particle .ptc_b{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 80%;
+    background-position: 40% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../img/particles_b.png);
+    animation: 5s ptc_b infinite linear;
+}
+@keyframes ptc_b {
+    0%{background-position: 40% 100;}
+    50%{background-position: 50% 50%;}
+    100%{background-position: 40% -13.53%;}
+}
+#hot .frame .top h3{
+    text-align: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1;
+    padding-top: 30px;
+}
+#hot .frame .top .sw_slider{
+    width: 400%;
+    position: absolute;
+    left: -100%; top: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(-50%);
+    padding-top: 120px;
+}
+#hot .frame .top .sw_slider .sw_slide{
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#hot .frame .top .sw_slider .sw_slide img{}
+#hot .frame .top .btn{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    left: 0; bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+#hot .frame .top .btn button{
+    width: 150px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+}
+#hot .frame .top .btn button:hover{
+    background-color: rgba(255,255,255,0.3);
+    transition: background-color 0.2s;
+}
+#hot .frame .bottom{
+    display: flex;
+    flex-wrap: wrap;
+}
+#hot .frame .bottom .box{
+    width: calc(25% - 20px);
+    height: 150px;
+    padding: 14px;
+    margin: 20px 10px;
+    border: 1px solid var(--sec1-color);
+    border-radius: 3px;
+    background-color: var(--sec2-color);
+    position: relative;
+}
+#hot .frame .bottom .box.active,
+#hot .frame .bottom .box:hover{
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.2s, box-shadow 0.2s;
+    background-color: #fff;
+}
+#hot .frame .bottom .box h4{
+    font-size: 18px;
+    color: #333;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+#hot .frame .bottom .box p{
+    font-size: 15px;
+    color: #777;
+    word-break: keep-all;
+}
+#hot .frame .bottom .box .price_wrap{
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+#hot .frame .bottom .box .price_wrap p{
+    font-size: 20px;
+    color: var(--sec1-color);
+    padding-right: 5px;
+}
+#hot .frame .bottom .box .price_wrap p span{}
+#hot .frame .bottom .box .price_wrap .cart_icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--sec1-color);
+    background-image: url(../img/shopping_cart_icon.svg);
+    background-repeat: no-repeat;
+    background-position: 53% 55%;
+    background-size: 80%;
+}
+#hot .frame .bottom .box .price_wrap .cart_icon:hover{
+    background-color: var(--point-color);
+    transition: background-color 0.2s;
+}
+
+
+/* review part */
+#review{
+    background-image: url(../img/review_bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+#review .frame{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+#review .frame h3{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    padding: 50px 0;
+    text-shadow: 0 0 8px rgba(0,0,0,0.7);
+    line-height: 1;
+}
+#review .frame .cont{
+    display: flex;
+    flex-wrap: wrap;
+}
+#review .frame .cont .box{
+    width: calc(100% / 3 - 20px);
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#review .frame .cont .box .img{
+    height: 280px;
+    background: #eee;
+    box-shadow: inset 2px 0 7px rgba(0,0,0,0.3);
+    background-size: 100%;
+    background-position: 50% 50%;
+}
+#review .frame .cont .box:hover .img{
+    background-size: 105%;
+    transition: background-size 0.2s;
+}
+#review .frame .cont .box:nth-child(1) .img{
+    background-image: url(../img/review_01.jpg);
+}
+#review .frame .cont .box:nth-child(2) .img{
+    background-image: url(../img/review_02.jpg);
+}
+#review .frame .cont .box:nth-child(3) .img{
+    background-image: url(../img/review_03.jpg);
+}
+#review .frame .cont .box .txt{
+    padding: 16px 0 8px;
+}
+#review .frame .cont .box .txt h4{
+    font-size: 18px;
+    color: #333;
+    padding-bottom: 10px;
+}
+#review .frame .cont .box .txt p{
+    font-size: 15px;
+    word-break: keep-all;
+}
+
+/* recommand part */
+#recommand{
+    position: relative;
+}
+#recommand .green_bg{
+    position: absolute;
+    top: 52%; right: 0;
+    width: 100%; height: 440px;
+    transform: translateY(-50%);
+    background-color: var(--sec2-color);
+}
+#recommand .frame{
+    width: 1200px;
+    padding: 0 10px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+#recommand .frame h3{
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+}
+#recommand .frame .cont{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+#recommand .frame .cont .roulette{
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    user-select: none;
+}
+#recommand .frame .cont .roulette .arrow{
+    position: absolute;
+    top: 50%; right: -40px;
+    width: 20px; height: 20px;
+    background-image: url(../img/triangle-icon.png);
+    background-size: cover;
+    transform: translateY(-50%);
+}
+#recommand .frame .cont .roulette img{
+    height: 500px;
+    /*
+    transform: rotate(337.5deg);
+    긴빵
+    transform: rotate(382.5deg);
+    세모 
+    transform: rotate(427.5deg);
+    바게트
+    transform: rotate(472.5deg);
+    네모
+    */
+}
+/* 랜덤룰렛 1~4 */
+#recommand .frame .cont.rotate1 .roulette img{
+    animation: 1s RL1 1;
+    transform: rotate(382.5deg);
+}
+@keyframes RL1 {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(382.5deg);}
+}
+#recommand .frame .cont.rotate2 .roulette img{
+    animation: 1s RL2 1;
+    transform: rotate(427.5deg);
+}
+@keyframes RL2 {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(427.5deg);}
+}
+#recommand .frame .cont.rotate3 .roulette img{
+    animation: 1s RL3 1;
+    transform: rotate(472.5deg);
+}
+@keyframes RL3 {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(472.5deg);}
+}
+#recommand .frame .cont.rotate4 .roulette img{
+    animation: 1s RL4 1;
+    transform: rotate(517.5deg);
+}
+@keyframes RL4 {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(517.5deg);}
+}
+#recommand .frame .cont .roulette .start{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background-color: var(--point-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset -3px -3px 7px rgba(0,0,0,0.35);
+    z-index: 5;
+}
+#recommand .frame .roulette .start:hover{
+    box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
+}
+#recommand .frame .cont .roulette .start p{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--pri-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+#recommand .frame .cont .sandwiches{
+    position: absolute;
+    top: 41%; left: 20%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+#recommand .frame .cont .sandwiches img{
+    position: absolute;
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.5));
+}
+#recommand .frame .cont .table{
+    position: absolute;
+    top: 50%; right: 0;
+    width: 500px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    background-image: url(../img/tablecoth.png);
+    background-size: cover;
+}
+#recommand .frame .cont .table .plate{
+    width: 440px;
+    height: 257px;
+    background-size: 100%;
+    background-image: url(../img/plate.png);
+}
+#recommand .frame .cont .table .txt_part{
+    /* padding-bottom: 40px; */
+}
+#recommand .frame .cont .table .txt_part h4{
+    font-size: 20px;
+    margin: 20px 0;
+    width: 240px;
+    padding: 8px 0;
+    text-align: center;
+    border: 1px solid var(--pri-color);
+    border-radius: 30px;
+    color: #333;
+    text-shadow: 0 0 6px #fff, 0 0 4px #fff;
+    background-color: rgba(255,255,255,0.7);
+}
+#recommand .frame .cont .table .txt_part button{
+    display: block;
+    width: 150px;
+    line-height: 40px;
+    margin: 0 auto;
+    font-size: 17px;
+    color: var(--pri-color);
+    background-color:  var(--pri-color);
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+}
+#recommand .frame .cont .table button:hover{
+    background-color: #394b39;
+    transition: background-color 0.2s, color 0.2s;
+}

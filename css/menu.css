@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+#menu,
+#menu_detail{
+    background: #e9f4e9; /* Old browsers */
+    background: -moz-linear-gradient(top, #e9f4e9 0%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e9f4e9 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e9f4e9 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f4e9', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+#menu .frame{
+    width: 1200px;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+#menu .frame h2{
+    font-size: 28px;
+    text-align: center;
+    color: var(--pri-color);
+    padding-bottom: 40px;
+}
+#menu .frame .btns{
+    padding-bottom: 40px;
+}
+#menu .frame .btns ul{
+    display: flex;
+    justify-content: center;
+}
+#menu .frame .btns ul li{
+    margin: 0 5px;
+}
+#menu .frame .btns ul li a{
+    padding: 8px 16px;
+    border: 1px solid var(--pri-color);
+    border-radius: 20px;
+    display: block;
+    color: var(--pri-color);
+}
+#menu .frame .btns ul li.active a,
+#menu .frame .btns ul li:hover a{
+    background-color: var(--pri-color);
+    color: #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+#menu .frame .food{
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu .frame .food .box{
+    width: calc(25% - 20px);
+    margin: 0 10px 40px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+#menu .frame .food .box:hover{
+    box-shadow: 0 0 10px rgba(40, 49, 40, 0.3);
+    transition: box-shadow 0.2s;
+}
+#menu .frame .food .box .img{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu .frame .food .box .img img{
+    width: 95%;
+}
+#menu .frame .food .box:hover .img img{
+    width: 100%;
+    transition: width 0.2s;
+}
+#menu .frame .food .box .txt{
+    text-align: center;
+    padding-bottom: 20px;
+}
+#menu .frame .food .box .txt p{
+    font-size: 18px;
+}
+
+
+#menu_detail{
+    padding: 100px 0;
+}
+#menu_detail .frame{
+    width: 1200px;
+    padding: 80px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 3px;
+}
+#menu_detail .frame .left{
+    width: 500px;
+    height: 160px;
+    margin: 0 10px;
+    background-size: 60%;
+    background-position: 50% 50%;
+    background-image: url(../img/sandwich_03.png);
+    background-repeat: no-repeat;
+}
+#menu_detail .frame .right{
+    width: calc(100% - 580px);
+    padding-right: 60px;
+    color: var(--pri-color);
+}
+#menu_detail .frame .right h2{
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+#menu_detail .frame .right .info{
+    padding-bottom: 20px;
+    word-break: keep-all;
+}
+#menu_detail .frame .right .pri_wrap{
+    text-align: right;
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+#menu_detail .frame .right .pri_wrap span{
+    font-size: 24px;
+    color: var(--sec1-color);
+}
+#menu_detail .frame .btns{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#menu_detail .frame .btns .fav{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: 1px solid var(--pri-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu_detail .frame .btns .fav:hover{
+    background-color: var(--pri-color);
+    color: #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
+#menu_detail .frame .btns .fav img{
+    height: 20px;
+}
+#menu_detail .frame .btns .fav:hover img{
+    filter: invert(100%);
+    transition: fliter 0.2s;
+}
+#menu_detail .frame .btns button{
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: transparent;
+    border: 1px solid var(--pri-color);
+    border-radius: 20px;
+    font-size: 17px;
+    line-height: 1;
+}
+#menu_detail .frame .btns button:hover{
+    background-color: var(--pri-color);
+    color: #fff;
+    transition: background-color 0.2s, color 0.2s;
+}
