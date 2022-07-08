@@ -108,6 +108,7 @@ a{text-decoration: none;}
 
 #header .frame nav{
     position: relative;
+    z-index: 100;
 }
 #header .frame nav > ul{
     display: flex;
